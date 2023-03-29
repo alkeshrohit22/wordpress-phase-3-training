@@ -42,10 +42,10 @@ function social_share_links() {
 
 		// Add sharing links at the end of page/page content
 		$content = '<div class="social-box"><div class="social-btn">Social Share: ';
-		$content .= '<a class="col-2 sbtn s-twitter" href="'. $twitterURL .'" target="_blank" rel="nofollow"></a>';
-		$content .= '<a class="col-2 sbtn s-facebook" href="'.$facebookURL.'" target="_blank" rel="nofollow"><span>Facebook</span></a>';
-		$content .= '<a class="col-2 sbtn s-linkedin" href="'.$linkedInURL.'" target="_blank" rel="nofollow"><span>LinkedIn</span></a>';
-		$content .= '<a class="col-2 sbtn s-reddit" href="'.$redditURL.'" target="_blank" rel="nofollow"><span>Reddit</span></a>';
+		$content .= '<a class="col-2 sbtn s-twitter" href="'. $twitterURL .'" target="_blank" rel="nofollow"><li>Twitter</li></a>';
+		$content .= '<a class="col-2 sbtn s-facebook" href="'.$facebookURL.'" target="_blank" rel="nofollow"><li>Facebook</li></a>';
+		$content .= '<a class="col-2 sbtn s-linkedin" href="'.$linkedInURL.'" target="_blank" rel="nofollow"><li>LinkedIn</li></a>';
+		$content .= '<a class="col-2 sbtn s-reddit" href="'.$redditURL.'" target="_blank" rel="nofollow"><li>Reddit</li></a>';
 		$content .= '</div></div>';
 
 		return $content;
@@ -56,4 +56,60 @@ function social_share_links() {
 }
 
 add_shortcode('social_share_links','social_share_links');
+
+
+
+//Init Hook for the custom post type
+add_action('init', 'custom_post_type_movies');
+function custom_post_type_movies() {
+	$supports = array(
+		'title', // post title
+		'editor', // post content
+		'author', // post author
+		'thumbnail', // featured images
+		'excerpt', // post excerpt
+		'custom-fields', // custom fields
+		'comments', // post comments
+		'revisions', // post revisions
+		'post-formats', // post formats
+	);
+
+	$labels = array(
+		'name' => _x('Movie', 'plural'),
+		'singular_name' => _x('Movie', 'singular'),
+		'menu_name' => _x('Movie', 'admin menu'),
+		'name_admin_bar' => _x('Movie', 'admin bar'),
+		'add_new' => _x('Add New', 'add new'),
+		'add_new_item' => __('Add New Movie'),
+		'new_item' => __('New Movie'),
+		'edit_item' => __('Edit Movie'),
+		'view_item' => __('View Movie'),
+		'all_items' => __('All Movie'),
+		'search_items' => __('Search Movie'),
+		'not_found' => __('No Movie found.'),
+	);
+
+	$args = array(
+		'supports' => $supports,
+		'labels' => $labels,
+		'description' => 'Holds our movie and specific data',
+		'public' => true,
+		'taxonomies' => array( 'category', 'post_tag' ),
+		'show_ui' => true,
+		'show_in_menu' => true,
+		'show_in_nav_menus' => true,
+		'show_in_admin_bar' => true,
+		'can_export' => true,
+		'capability_type' => 'post',
+		'show_in_rest' => true,
+		'query_var' => true,
+		'rewrite' => array('slug' => 'movie'),
+		'has_archive' => true,
+		'hierarchical' => true,
+		'menu_position' => 6,
+		'menu_icon' => 'dashicons-megaphone',
+	);
+
+	register_post_type('movie', $args); // Register Post type
+}
 // END ENQUEUE PARENT ACTION

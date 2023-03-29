@@ -74,25 +74,26 @@ a.col-2.sbtn span {
 }
 
 a.col-2.sbtn {
-    width: 6%;
+    width: 10%;
     display: inline-block;
-    text-align: center;
     border-radius: 50px;
     padding: 10px;
     color: #fff;
     margin: 0 0.5% 0 0.5%;
     line-height: 1.825 !important;
-    max-width: 50px;
-    min-width: 50px;
+    text-decoration: none;
+    text-align: center;
+}
+
+a.col-2.sbtn > li {
+    list-style-type: none;
+    text-decoration: none;
 }
 
 .s-twitter {
     background: #03A9F4;
 }
-.s-twitter::before {
-    font-family: fontawesome;
-    content: '\f099';
-}
+
 .s-twitter:hover {
     background: #0093d6;
 }
@@ -100,18 +101,9 @@ a.col-2.sbtn {
 .s-facebook {
     background: #3F51B5;
 }
-.s-facebook::before {
-    font-family: fontawesome;
-    content: '\f09a';
-}
 
 .s-linkedin {
     background: #1a7baa;
-}
-
-.s-linkedin::before {
-    font-family: fontawesome;
-    content: '\f0e1';
 }
 
 a.col-2.sbtn.s-linkedin:hover {
@@ -120,11 +112,6 @@ a.col-2.sbtn.s-linkedin:hover {
 
 .s-reddit {
     background: #ff4500;
-}
-
-.s-reddit::before {
-    font-family: fontawesome;
-    content: '\f1a1';
 }
 
 a.col-2.sbtn.s-reddit:hover {
