@@ -4,7 +4,7 @@
  */
 
 body{
-    color: #888888;
+    color: #004274;
     font-family: Karla, sans-serif;
 }
 
@@ -54,7 +54,7 @@ h1,h2,h3,h4,h5,h6,
 }
 .re-header-contact-info>[class*="re-icon-"]
 {
-    color: #ec1c2a;
+    color: #004274;
 }
 .re-btn-default
 {
@@ -155,7 +155,7 @@ h1,h2,h3,h4,h5,h6,
     color: #004274;
 }
 .wpl_mcalc_container .form-result .text-box {
-    color: #ec1c2a;
+    color: #004274;
 }
 .wpl_mcalc_container .form-result .wpl-mortgage-symbol {
     color: #004274;
@@ -169,7 +169,7 @@ h1,h2,h3,h4,h5,h6,
 }
 .wpl-gen-tab-wp.wpl-complex-tabs-wp ul li.wpl-gen-tab-active-parent a.wpl-gen-tab-active span,
 .wpl-crm-form.wpl-crm-form-frontend .wpl-crm-grid-tab ul li.wpl-gen-tab-active-parent a.wpl-gen-tab-active span{
-    background: #ec1c2a;
+    background: #004274;
 }
 .wpl-crm-form.wpl-crm-form-frontend .wpl-crm-form-next-btn,
 .wpl-crm-form.wpl-crm-form-frontend .wpl-crm-form-submit-btn{
@@ -190,7 +190,7 @@ h1,h2,h3,h4,h5,h6,
 }
 .wpl_search_widget_links .wpl-save-search-wp a:hover:after,
 .wpl_search_widget_links .wpl-rss-wp a:hover:after{
-    color: #ec1c2a;
+    color: #004274;
 }
 .re-search .search_submit_box
 {
@@ -206,61 +206,61 @@ h1,h2,h3,h4,h5,h6,
 .wpl_addon_membership_container .wpl_dashboard_header:before,
 .wpl_addon_membership_container .wpl_memberships_label:before,
 .wpl_addon_membership_container .wpl_membership_addon_label:before {
-     background: #ec1c2a;
+     background: #004274;
 }
 .wpl-membership-wpluser-head .wpl_activity_title:after,
 #wpl_dashboard_bottom_container .wpl_activity_title:after{
-     background: #ec1c2a;
+     background: #004274;
 }
 .re-title-separator,.widget-title:after
 {
-    background-color: #ec1c2a;
+    background-color: #004274;
 }
 
 .wpl_prp_show_container .wpl_prp_container_content_title .wpl_prp_top_box_details .price_box {
-    background: #ec1c2a;
+    background: #004274;
 }
 .wpl_prp_show_container .location_build_up:before{
-     color: #ec1c2a;
+     color: #004274;
 }
 .wpl_prp_show_container .wpl-gallery-pshow-wp .lSSlideOuter .lSGallery > li.active img{
-     border-color: #ec1c2a !important;
+     border-color: #004274 !important;
 }
 .wpl-ewallet-balance span{
-    color: #ec1c2a;
+    color: #004274;
 }
 
 #wpl_prp_show_container .wpl_prp_position3_boxes_title:after,
 #wpl_prp_show_container .wpl_prp_position_contact_title:after,
 #wpl_prp_show_container .wpl_prp_show_detail_boxes_title:after,
 #wpl_prp_show_container .wpl_prp_right_boxes_title:after{
-    background: #ec1c2a !important;
+    background: #004274 !important;
 }
 
 .wpl-booking-button-date>a{
-    background: #ec1c2a;
+    background: #004274;
 }
 .wpl-booking-button-date>a:hover{
-    color: #ec1c2a;
-    border-color: #ec1c2a;
+    color: #004274;
+    border-color: #004274;
 }
 .wpl_pagination_container .pagination li.active a,
 .wpl_property_listing_container.wpl-property-listing-mapview .wpl_pagination_container .pagination li.active a,
 .pagination-wp .pagination li.active a,
 .wpl-profile-listing-wp .wpl_pagination_container .pagination li.active a{
-     color: #ec1c2a !important;
+     color: #004274 !important;
      border-color: #004274 !important;
 }
 .pwizard-wp.wpl_view_container .side-content-wp input[type='checkbox']:checked + label:before,
 .wpl-subscription-form-container input[type='checkbox']:checked + label:before,
 .wpl-login-form-remember-wp input[type='checkbox']:checked + label:before {
-     background: #ec1c2a;
+     background: #004274;
 }
 .pmanager-wp #wpl_listings_top_tabs_container .wpl-tabs li.wpl-selected-tab a{
-    color: #ec1c2a;
+    color: #004274;
 }
 #wpl_register_info strong:first-child:after{
-    background: #ec1c2a;
+    background: #004274;
 }
 
 .re-section-call-us
@@ -268,25 +268,25 @@ h1,h2,h3,h4,h5,h6,
     color: #004274;
 }
 a{
-    color: #00aeef;
+    color: #004274;
 }
 a:hover{
-    color: #0bacdd;
+    color: #004274;
 }
 .re-header-type-2 .re-user-links a{
-    border-color: #00aeef;
+    border-color: #004274;
 }
 .re-header-type-2 .re-user-links a:hover,
 .re-header-type-2 .re-user-links a:focus{
-    color: #0bacdd;
-    border-color: #0bacdd;
+    color: #004274;
+    border-color: #004274;
 }
 .vc_separator.vc_sep_color_juicy_pink .vc_sep_line {
-    color: #ec1c2a;
+    color: #004274;
 }
 .wpl_sort_options_container .wpl-sort-options-selectbox select,
 .wpl_sort_options_container .wpl-sort-options-selectbox:after{
-     color: #00aeef;
+     color: #004274;
 }
 .wpl_list_grid_switcher div.active:before,
 .wpl_list_grid_switcher a.active:before,
@@ -297,11 +297,11 @@ a:hover{
 .wpl_list_grid_switcher.wpl-list-grid-switcher-icon-text a.active,
 .wpl_list_grid_switcher.wpl-list-grid-switcher-icon-text div.active
 {
-    color: #00aeef !important;
+    color: #004274 !important;
 }
 .wpl_list_grid_switcher .map_view:before,
 .wpl_list_grid_switcher.wpl-list-grid-switcher-icon-text .map_view:before {
-    color: #ec1c2a !important;
+    color: #004274 !important;
 }
 .wpl_list_grid_switcher .map_view,
 .wpl_list_grid_switcher.wpl-list-grid-switcher-icon-text .map_view{
@@ -310,17 +310,17 @@ a:hover{
 .wpl_carousel_container .simple_list.wpl-plugin-owl .right_section .location:before,
 .wpl_property_listing_container .view_detail .wpl_prp_title,
 .wpl_agents_widget_container .wpl_profile_container .wpl_profile_container_title .title{
-    color: #00aeef;
+    color: #004274;
 }
 .wpl_property_listing_container .view_detail .wpl_prp_title:hover,
 .wpl_agents_widget_container .wpl_profile_container .wpl_profile_container_title .title:hover{
-    color:#0bacdd;
+    color:#004274;
 }
 .wpl_carousel_container .simple_list.wpl-plugin-owl .right_section .more_info{
-    background: #00aeef;
+    background: #004274;
 }
 .re-carousel .slick-dots li.slick-active button{
-     background-color: #ec1c2a;
+     background-color: #004274;
 }
 
 #footer
@@ -377,10 +377,10 @@ h6
 
 body
 {
-    font-size: 13px;
+    font-size: 15px;
 }
 
 .wpl_prp_show_container
 {
-    font-size: 13px;
+    font-size: 15px;
 }

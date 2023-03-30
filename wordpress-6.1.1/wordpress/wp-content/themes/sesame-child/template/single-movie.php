@@ -1,8 +1,7 @@
 <?php
-get_header();
-/* Start the Loop */
-//echo "here";
-while (have_posts()) : the_post();
-	get_template_part('template-parts/', get_post_format());
-endwhile; // End of the loop.
-get_footer();
+//get_header();
+///* Start the Loop */
+//while (have_posts()) : the_post();
+//	//get_template_part('template/', get_post_format());
+//endwhile; // End of the loop.
+//get_footer();
