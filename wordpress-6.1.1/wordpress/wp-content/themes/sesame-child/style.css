@@ -173,68 +173,8 @@ a.col-2.sbtn.s-reddit:hover {
     opacity: 1;
 }
 
-/* Testimonial Slider */
-.testimonial-slider-container {
-    position: relative;
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-}
 
-.testimonial-slider {
-    width: 100%;
-}
 
-.testimonial-slide {
-    padding: 20px;
-    text-align: center;
-}
-
-.testimonial-content {
-    font-size: 18px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-}
-
-.testimonial-author {
-    font-size: 16px;
-    font-weight: bold;
-}
-
-.testimonial-slider-button {
-    position: absolute;
-    bottom: 20px;
-    right: 20px;
-    background-color: #007cba;
-    color: #fff;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-
-.testimonial-slider-button:hover {
-    background-color: #005d84;
-}
-
-.re-entry-title {
-    /*display: none;*/
-    color: blue;
-}
-
-.re-entry-title:hover {
-    /*display: none;*/
-    color: rebeccapurple;
-}
-
-.entry-title > a{
-    text-decoration: none;
-    color : blue;
-}
-.entry-title > a:hover{
-    text-decoration: none;
-    color : green;
-}
 
 
 

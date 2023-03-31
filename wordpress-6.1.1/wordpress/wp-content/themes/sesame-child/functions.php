@@ -72,8 +72,7 @@ function custom_post_type_movies() {
 		'post-formats', // post formats
 	);
 
-	$labels = array(
-            'name' => _x('Movie', 'plural'),
+	$labels = array( 'name' => _x('Movies', 'plural'),
 		'singular_name' => _x('Movie', 'singular'),
 		'menu_name' => _x('Movie', 'admin menu'),
 		'name_admin_bar' => _x('Movie', 'admin bar'),
@@ -182,62 +181,55 @@ function save_testimonial_author_meta($post_id) {
 		delete_post_meta($post_id, 'testimonial_author');
 	}
 }
-add_action('save_post_testimonial', 'save_testimonial_author_meta');
 
-//slider code
-add_shortcode( 'testimonial_slider', 'testimonial_slider_shortcode' );
 function testimonial_slider_shortcode($atts) {
 	ob_start();
 	$query = new WP_Query(array(
 		'post_type' => 'testimonial',
-		'posts_per_page' => 1
+		'posts_per_page' => -1
 	));
 
 	if ($query->have_posts()) {
-		wp_register_script('jquery', get_stylesheet_directory_uri() . '/assets/js/jquery-3.3.1.js' ); // enqueue jQuery
-		wp_register_script('slick-js', get_stylesheet_directory_uri() .'/assets/js/slick.min.js', array('jquery'), true); // enqueue slick JS
-		wp_register_script('slick-css', get_stylesheet_directory_uri(). '/assets/css/slick.css', array(), '1.6.0', 'all'); // enqueue slick CSS
-
+		wp_enqueue_style('slick-css', 'https://cdn.jsdelivr.net/jquery.slick/1.3.11/slick.css');
+		wp_enqueue_style('testimonial-slider-css', 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-testimonial-slider/1.0.0/bootstrap-testimonial-slider.min.css');
 		wp_enqueue_script('jquery');
-        wp_enqueue_script('slick-js');
-        wp_enqueue_script('slick-css');
+		wp_enqueue_script('slick-js', 'https://cdn.jsdelivr.net/jquery.slick/1.3.11/slick.min.js', array('jquery'), '', true);
 
 		?>
         <div class="testimonial-slider-container">
             <div class="testimonial-slider">
-				<?php
-				while ($query->have_posts()) {
-					$query->the_post();
-					?>
+				<?php while ($query->have_posts()) : $query->the_post(); ?>
                     <div class="testimonial-slide">
-                        <div class="testimonial-content">
-							<?php the_content(); ?>
-                        </div>
-                        <div class="testimonial-author">
-							<?php the_title(); ?>
-                        </div>
+                        <div class="testimonial-author"><h2><?php the_title(); ?></h2></div>
+                        <div class="testimonial-content"><?php the_content(); ?></div><br>
+                        <div class="testimonial-author"><h4>Written By : @<?php the_author(); ?></h4></div>
                     </div>
-					<?php
-				}
-				wp_reset_postdata();
-				?>
+				<?php endwhile; ?>
             </div>
-            <button class="testimonial-slider-button">Next</button>
         </div>
         <script>
             jQuery('.testimonial-slider').slick({
                 slidesToShow: 1,
-                slidesToScroll: 1
-            });
-            jQuery('.testimonial-slider-button').click(function() {
-                jQuery('.testimonial-slider').slick('slickNext');
+                slidesToScroll: 1,
+                dots: true,
+                infinite: true,
+                speed: 700,
+                autoplay: true,
+                autoplaySpeed: 1000,
+                arrows: true
             });
         </script>
 		<?php
+
+		wp_reset_postdata();
 	}
 
 	$output = ob_get_clean();
 	return $output;
 }
+add_shortcode( 'testimonial_slider', 'testimonial_slider_shortcode' );
+
+
+
 
 // END ENQUEUE PARENT ACTION

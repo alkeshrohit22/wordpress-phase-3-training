@@ -20,7 +20,7 @@ global $sesame_options;
                 }else if(is_tag()){
                    echo esc_html(single_tag_title());
                 }  else if(is_archive()) {
-                    echo esc_html(get_the_archive_title());
+                    echo esc_html(wp_strip_all_tags(get_the_archive_title()));
                 } ?>
 
             </h<?php echo esc_attr($sesame_options['page_title_h_tag']); ?>>
@@ -44,10 +44,12 @@ global $sesame_options;
                     }else if(is_tag()){
                         echo esc_html(single_tag_title());
                     }  else if(is_archive()) {
-                        echo esc_html(get_the_archive_title());
+	                    echo esc_html(get_the_archive_title());
                     } ?>
                 </h<?php echo esc_attr($sesame_options['page_title_h_tag']); ?>>
             </div>
         </header>
     <?php endif; ?>
 <?php endif; ?>
+
+
